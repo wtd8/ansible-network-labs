@@ -2,7 +2,7 @@
 
 **Table of Contents:**
 
-- [Sirius Labs]
+- [Sirius Labs] (#lab-overview)
   - [Overview](#overview)
 - [Lab1](#lab1)
   - [Overview](#overview)
