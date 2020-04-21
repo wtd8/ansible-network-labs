@@ -4,12 +4,12 @@
 
 - [Sirius Labs]
   - [Overview](#overview)
-  - [Lab1](#lab1)
-    - [Overview](#overview)
-  - [Lab2](#lab2)
-    - [Overview](#overview)
-  - [Lab3](#lab3)
-    - [Overview](#overview)
+- [Lab1](#lab1)
+  - [Overview](#overview)
+- [Lab2](#lab2)
+  - [Overview](#overview)
+- [Lab3](#lab3)
+  - [Overview](#overview)
 
 ## Overview
 
