@@ -1,0 +1,24 @@
+---
+- name: Show router configurations
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+  - name: configure hostname
+    ios_config:
+      lines: hostname R104
+
+  - name: configure interface Gig2
+    ios_config:
+      lines:
+        - no shutdown
+        - description WAN
+        - ip address dhcp
+      parents: interface GigabitEthernet2
+
+  - name: configure interface Gig1
+    ios_config:
+      lines:
+        - description MGMT
+      parents: interface GigabitEthernet1
