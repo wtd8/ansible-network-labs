@@ -31,5 +31,5 @@
 
     - name: DISPLAY THE HOSTNAME
       debug:
-        msg: "The hostname is {{ show_output.stdout[0] }}"
+        msg: "The {{ show_output.stdout[0] }}"
       tags: show
