@@ -1,0 +1,10 @@
+---
+- name: HARDEN IOS ROUTERS
+  hosts: cisco
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: ENSURE THAT ROUTERS ARE SECURE
+      ios_config:
+        src: secure_router.cfg
