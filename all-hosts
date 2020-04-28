@@ -1,3 +1,20 @@
+[all:vars]
+ansible_user=admin
+ansible_pass=ansible
+ansible_port=22
+
+[routers:children]
+cisco
+
+[cisco]
+R101 ansible_host=10.1.0.101
+
+[cisco:vars]
+ansible_network_os=ios
+
+[dc1]
+R101
+
 [lab_routers]
 R0 ansible-host=10.1.0.10
 R101 ansible-host=10.1.101.10
@@ -7,3 +24,26 @@ R104 ansible-host=10.1.104.10
 R105 ansible-host=10.1.105.10
 R106 ansible-host=10.1.106.10
 R107 ansible-host=10.1.107.10
+R108 ansible-host=10.1.108.10
+R109 ansible-host=10.1.109.10
+R110 ansible-host=10.1.110.10
+R111 ansible-host=10.1.111.10
+R112 ansible-host=10.1.112.10
+R113 ansible-host=10.1.113.10
+R114 ansible-host=10.1.114.10
+R115 ansible-host=10.1.115.10
+R116 ansible-host=10.1.116.10
+R117 ansible-host=10.1.117.10
+R118 ansible-host=10.1.118.10
+R119 ansible-host=10.1.119.10
+R120 ansible-host=10.1.120.10
+R121 ansible-host=10.1.121.10
+R122 ansible-host=10.1.122.10
+R123 ansible-host=10.1.123.10
+R124 ansible-host=10.1.124.10
+R125 ansible-host=10.1.125.10
+R126 ansible-host=10.1.126.10
+R127 ansible-host=10.1.127.10
+R128 ansible-host=10.1.128.10
+R129 ansible-host=10.1.129.10
+R130 ansible-host=10.1.130.10
