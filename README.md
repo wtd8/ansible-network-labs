@@ -32,6 +32,7 @@ This is Lab #1.
 **Additional Python Libraries required:**
 
 - Jinja2  `2.10.3`
+- Paramiko 2.7
 
 ## Lab2
 
