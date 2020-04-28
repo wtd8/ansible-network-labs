@@ -7,7 +7,7 @@
   tasks:
   - name: configure hostname
     ios_config:
-      lines: hostname {{ hostname }}
+      lines: hostname {{ inventory_hostname }}
 
   - name: configure interface Gig2
     ios_config:
