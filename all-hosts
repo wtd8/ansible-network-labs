@@ -1,0 +1,9 @@
+[lab_routers]
+R0 ansible-host=10.1.0.10
+R101 ansible-host=10.1.101.10
+R102 ansible-host=10.1.102.10
+R103 ansible-host=10.1.103.10
+R104 ansible-host=10.1.104.10
+R105 ansible-host=10.1.105.10
+R106 ansible-host=10.1.106.10
+R107 ansible-host=10.1.107.10
