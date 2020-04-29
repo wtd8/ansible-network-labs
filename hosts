@@ -5,12 +5,20 @@ ansible_port=22
 
 [routers:children]
 cisco
+juniper
 
 [cisco]
-R101 ansible_host=10.1.0.101
+R<studentID> ansible_host=10.1.<studentID>.10
 
 [cisco:vars]
 ansible_network_os=ios
 
-[dc1]
-R101
+[juniper]
+
+[juniper:vars]
+ansible_network_os=junos
+
+[arista]
+
+[arista:vars]
+ansible_network_os=eos
