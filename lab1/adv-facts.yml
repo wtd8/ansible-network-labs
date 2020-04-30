@@ -20,14 +20,8 @@
       ios_command:
         commands:
           - show run | i hostname
-          - show ip interface brief
       tags: show
       register: show_output
-
-    - name: DISPLAY THE COMMAND OUTPUT
-      debug:
-        var: show_output
-      tags: show
 
     - name: DISPLAY THE HOSTNAME
       debug:
