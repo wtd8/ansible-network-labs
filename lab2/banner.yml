@@ -11,4 +11,4 @@
   - name: "Update banner message to '{{ banner_message }}'"
     ios_config:
       lines:
-        "banner motd % {{ banner_message }} %"
+        - "banner motd % {{ banner_message }} %"
