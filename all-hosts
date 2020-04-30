@@ -1,21 +1,13 @@
 [all:vars]
-ansible_user=admin
-ansible_pass=ansible
+ansible_user=ec2-user
+ansible_ssh_private_key_file=~/.ssh/network-key.pem
 ansible_port=22
-
-[routers:children]
-cisco
-
-[cisco]
-R101 ansible_host=10.1.0.101
 
 [cisco:vars]
 ansible_network_os=ios
+ansible_connection=networ
 
-[dc1]
-R101
-
-[lab_routers]
+[cisco]
 R0 ansible-host=10.1.0.10
 R201 ansible-host=10.1.201.10
 R102 ansible-host=10.1.102.10
