@@ -11,8 +11,8 @@
 
   - name: print out the results of ios_facts
     debug:
-    msg: "{{ facts }}"
+     msg: "{{ facts }}"
 
   - name: print out the router model
     debug:
-    msg: "Router model: {{ hostvars[inventory_hostname]['ansible_net_model'] }}"
+     msg: "Router model: {{ hostvars[inventory_hostname]['ansible_net_model'] }}"
