@@ -4,6 +4,9 @@
   connection: network_cli
   gather_facts: no
 
+  vars:
+    banner_message: oops, you ran this playbook without reading it first!
+
   tasks:
   - name: configure {{ inventory_hostname }} hostname
     ios_config:
@@ -22,3 +25,13 @@
       lines:
         - description MGMT
       parents: interface GigabitEthernet1
+      
+  - name: Setting banner message to "{{ banner_message }}"
+    ios_config:
+      lines:
+        - banner motd % {{ banner_message }} %
+        
+  - name: add username and password to router
+    ios_config:
+      lines:
+        - username siduserXXX privilege 15 secret password
