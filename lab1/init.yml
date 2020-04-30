@@ -1,5 +1,5 @@
 ---
-- name: Show router configurations
+- name: Initialize Router
   hosts: all
   connection: network_cli
   gather_facts: no
