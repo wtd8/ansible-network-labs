@@ -4,14 +4,11 @@
   gather_facts: no
   connection: network_cli
   
-  vars:
-    ansible_network_os: ios
-    dns_servers:
-      - 8.8.8.8
-      - 8.8.4.4
+  vars_files:
+    - ~/ansible-network-labs/vars.yml
       
   tasks:
-  - name: configure router R{{ studenid }}
+  - name: configure router {{ studentrouter }}
     block:
       - name: configure name servers
         ios_config:
@@ -30,5 +27,5 @@
           lines:
             - ip address 172.17.{{ studentid }}.1 255.255.255.0
           parents: interface Loopback0
-    when: '"R{{ studentid }}" in inventory_hostname'
+    when: '"{{ studentrouter }}" in inventory_hostname'
   
