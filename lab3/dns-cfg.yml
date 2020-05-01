@@ -18,7 +18,7 @@
           name_servers: "{{ item }}"
         loop: "{{ dns_servers }}"
     
-      - name: enable GigabitEthernet1 interface
+      - name: enable LoopBack0 interface
         ios_interface:
           name: Loopback 0
           description: Loopback Interface 0
