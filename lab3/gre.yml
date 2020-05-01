@@ -3,6 +3,8 @@
   hosts: routers
   gather_facts: no
   connection: network_cli
+  vars_files:
+    - ~/ansible-network-labs/vars.yml
 
   tasks:
   - name: create tunnel interface to R0
@@ -10,6 +12,14 @@
       lines:
        - 'ip address 172.16.{{ studentid }}.10 255.255.255.0'
        - 'tunnel source GigabitEthernet2'
-       - 'tunnel destination 10.2.0.10'
+       - 'tunnel destination {{ r0g2ip }}'
        - 'description Tunnel to R0'
-      parents: interface Tunnel 0
+      parents: interface Tunnel {{ studentid }}
+  - name: create tunnel interface to R0
+    ios_config:
+      lines:
+        - 'router-id 172.17.{{ studentid }}.1
+        - 'passive-interface default'
+        - 'network 0.0.0.0 0.0.0.0 area 0'
+        - 'no passive-interface tunnel{{ studentid }}
+    parents: router ospf 1
