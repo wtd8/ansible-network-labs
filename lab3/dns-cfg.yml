@@ -11,7 +11,7 @@
       - 8.8.4.4
       
   tasks:
-  - name: configure router R{{ studenID }}
+  - name: configure router R{{ studenid }}
     block:
       - name: configure name servers
         ios_config:
@@ -28,7 +28,7 @@
       - name: Configure L0
         ios_config:
           lines:
-            - ip address 172.17.{{ studentID }}.1 255.255.255.0
+            - ip address 172.17.{{ studentid }}.1 255.255.255.0
           parents: interface Loopback0
-    when: '"R{{ studentID }}" in inventory_hostname'
+    when: '"R{{ studentid }}" in inventory_hostname'
   
