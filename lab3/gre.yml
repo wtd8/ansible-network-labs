@@ -15,7 +15,8 @@
        - 'tunnel destination {{ r0g2ip }}'
        - 'description Tunnel to R0'
       parents: interface Tunnel {{ studentid }}
-  - name: create tunnel interface to R0
+      
+  - name: Configure OSPF
     ios_config:
       lines:
         - 'router-id 172.17.{{ studentid }}.1'
