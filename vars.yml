@@ -4,3 +4,4 @@ ansible_network_os: ios
 dns_servers:
   - 8.8.8.8
   - 8.8.4.4
+r0g2ip: 10.2.0.10
