@@ -18,7 +18,7 @@
   - name: create tunnel interface to R0
     ios_config:
       lines:
-        - 'router-id 172.17.{{ studentid }}.1
+        - 'router-id 172.17.{{ studentid }}.1'
         - 'passive-interface default'
         - 'network 0.0.0.0 0.0.0.0 area 0'
         - 'no passive-interface tunnel{{ studentid }}'
