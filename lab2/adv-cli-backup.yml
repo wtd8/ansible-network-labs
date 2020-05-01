@@ -1,0 +1,17 @@
+---
+
+- name: backup router configuration with cli_command module
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: backup config
+      cli_command:
+        command: show run
+      register: backup
+
+    - name: move to file
+      copy:
+        content: "{{ backup.stdout }}"
+        dest: "lab2/backup/{{ inventory_hostname }}_config.{{ lookup('pipe','date +%Y-%m-%d@%H:%M') }}"
