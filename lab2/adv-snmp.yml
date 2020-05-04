@@ -1,0 +1,15 @@
+---
+- name: snmp ro/rw string configuration
+  hosts: cisco
+  gather_facts: no
+  var:
+    read-only: ansible-public
+    read-write: ansible-private
+
+  tasks:
+
+    - name: ensure that the desired snmp strings are present
+      ios_config:
+        commands:
+          - snmp-server community {{ read-only }} RO
+          - snmp-server community {{ read-write }} RW
