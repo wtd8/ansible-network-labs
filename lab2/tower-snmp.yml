@@ -3,13 +3,13 @@
   hosts: cisco
   gather_facts: no
   var:
-    read-only: ansible-public
-    read-write: ansible-private
+    read_only: ansible-public
+    read_write: ansible-private
 
   tasks:
 
     - name: ensure that the desired snmp strings are present
       ios_config:
         commands:
-          - snmp-server community {{ read-only }} RO
-          - snmp-server community {{ read-write }} RW
+          - snmp-server community {{ read_only }} RO
+          - snmp-server community {{ read_write }} RW
