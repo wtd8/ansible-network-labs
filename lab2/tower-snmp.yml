@@ -2,7 +2,7 @@
 - name: snmp ro/rw string configuration
   hosts: cisco
   gather_facts: no
-  var:
+  vars:
     read_only: ansible-public
     read_write: ansible-private
 
