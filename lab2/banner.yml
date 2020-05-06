@@ -5,7 +5,7 @@
   gather_facts: no
 
   vars:
-    banner_message: Restricted to authorized users only. All activities on this system are logged.
+    banner_message: Sirius Immersion Days are Super Fun and Cool!!!!
 
   tasks:
   - name: "Update banner message to '{{ banner_message }}'"
