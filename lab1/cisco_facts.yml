@@ -1,6 +1,6 @@
 --- 
 - name: Show router configurations
-  hosts: all
+  hosts: routers
   connection: network_cli
   gather_facts: no
   
