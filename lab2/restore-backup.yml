@@ -1,6 +1,6 @@
 ---
 - name: RESTORE CONFIGURATION
-  hosts: cisco
+  hosts: routers
   connection: network_cli
   gather_facts: no
 
