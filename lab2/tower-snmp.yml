@@ -1,6 +1,6 @@
 ---
 - name: snmp ro/rw string configuration
-  hosts: all
+  hosts: routers
   gather_facts: no
   vars:
     read_only: ansible-public
