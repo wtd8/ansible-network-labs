@@ -1,6 +1,6 @@
 ---
 - name: gather information from routers
-  hosts: all
+  hosts: routers
   gather_facts: no
 
   tasks:
