@@ -1,7 +1,7 @@
 ---
 
 - name: backup router configuration with cli_command module
-  hosts: cisco
+  hosts: routers
   connection: network_cli
   gather_facts: no
 
