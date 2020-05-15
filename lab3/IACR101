@@ -1,0 +1,54 @@
+---
+- name: Configure Instructor Router
+  hosts: R101
+  gather_facts: no
+  connection: network_cli
+    
+  tasks:
+    - name: configure base settings
+      ios_config:
+        lines:
+          - hostname R101
+          - snmp-server community popcorn RO
+          - snmp-server community caramelpopcorn RW
+          - banner motd % oops you ran this without reading the playbook first %
+          - username siduser101 privilege 15 secret password101
+          - ip name-server 8.8.4.4 8.8.8.8
+   
+    - name: configure Gig1 MGMT interface
+      ios_config:
+        lines:
+          - description MANAGEMENT
+        parents: interface GigabitEthernet1
+    
+    - name: configure Gig2 WAN interface
+      ios_config:
+        lines:
+          - ip address dhcp
+          - no shutdown
+          - description WAN
+        parents: interface GigabitEthernet2
+        
+    - name: configure L0
+      ios_config:
+        lines:
+          - ip address 172.17.101.1 255.255.255.255
+          - no shutdown
+          - description Loopback0
+        parents: interface Loopback0
+  
+    - name: create tunnel interface to R0
+      ios_config:
+        lines:
+          - ip address 172.16.101.1 255.255.255.0
+          - tunnel source GigabitEthernet2
+          - tunnel destination 10.2.0.10
+          - description Tunnel to R0
+        parents: interface Tunnel 101
+   
+    - name: Configure OSPF
+      ios_config:
+        lines:
+          - router-id 172.17.101.1
+          - network 0.0.0.0 0.0.0.0 area 0
+        parents: router ospf 1
