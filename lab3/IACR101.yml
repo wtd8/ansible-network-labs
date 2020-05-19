@@ -1,5 +1,5 @@
 ---
-- name: Configure Instructor Router
+- name: Configure Router
   hosts: R101
   gather_facts: no
   connection: network_cli
