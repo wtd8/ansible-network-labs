@@ -25,28 +25,17 @@ ansible_network_os=junos
 ansible_network_os=eos
 
 [lab]
-R101 ansible_host=10.1.101.10
-R102 ansible_host=10.1.102.10
-R103 ansible_host=10.1.103.10
-R104 ansible_host=10.1.104.10
-R105 ansible_host=10.1.105.10
-R106 ansible_host=10.1.106.10
-R107 ansible_host=10.1.107.10
-R108 ansible_host=10.1.108.10
-R109 ansible_host=10.1.109.10
-R110 ansible_host=10.1.110.10
-R111 ansible_host=10.1.111.10
-R112 ansible_host=10.1.112.10
-R113 ansible_host=10.1.113.10
-R114 ansible_host=10.1.114.10
-R115 ansible_host=10.1.115.10
-R116 ansible_host=10.1.116.10
-R117 ansible_host=10.1.117.10
-R118 ansible_host=10.1.118.10
-R119 ansible_host=10.1.119.10
-R120 ansible_host=10.1.120.10
-R121 ansible_host=10.1.121.10
-R122 ansible_host=10.1.122.10
+R201 ansible_host=10.1.201.10
+R202 ansible_host=10.1.202.10
+R203 ansible_host=10.1.203.10
+R204 ansible_host=10.1.204.10
+R205 ansible_host=10.1.205.10
+R206 ansible_host=10.1.206.10
+R207 ansible_host=10.1.207.10
+R208 ansible_host=10.1.208.10
+R209 ansible_host=10.1.209.10
+R210 ansible_host=10.1.210.10
+
 
 [lab:vars]
 ansible_network_os=ios
