@@ -1,0 +1,12 @@
+---
+- name: gather information from routers
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: gather router facts
+      ios_facts:
+
+    - name: print out the router model
+      debug:
+        msg: "Router model: {{ hostvars[inventory_hostname]['ansible_net_model'] }}"
