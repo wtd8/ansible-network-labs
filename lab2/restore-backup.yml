@@ -4,11 +4,27 @@
   connection: network_cli
   gather_facts: no
 
+  vars_prompt:
+    - name: "backup_file"
+      prompt: "What is the name of the config file to restore to: "
+      private: no
+      default: "R1_config.2020-01-01@23:00:00"
+
   tasks:
+    - name: Enable SCP Server 
+      cli_config:
+        config: | 
+          ip scp server enable
+
     - name: COPY RUNNING CONFIG TO ROUTER
-      command: scp ./backup/{{inventory_hostname}}.config {{inventory_hostname}}:/{{inventory_hostname}}.config
+      command: scp ./backup/{{ backup_file }} {{ansible_host}}:/{{ backup_file }}
+
+    - name: Disable SCP Server 
+      cli_config:
+        config: | 
+          no ip scp server enable
 
     - name: CONFIG REPLACE
       ios_command:
         commands:
-          - config replace flash:{{inventory_hostname}}.config force
+          - config replace flash:{{ backup_file }} force
