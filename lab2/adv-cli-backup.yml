@@ -12,7 +12,7 @@
 
     - name: Creating Directory
       file: 
-        path: "./backup"
+        path: "lab2/backup"
         state: directory
 
     - name: backup config
