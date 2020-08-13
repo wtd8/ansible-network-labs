@@ -10,6 +10,11 @@
       set_fact:
         timestamp: "{{ lookup('pipe','date +%Y-%m-%d@%H:%M:%S') }}"
 
+    - name: Creating Directory
+      file: 
+        path: "backup/"
+        state: touch
+
     - name: backup config
       cli_command:
         command: show run
@@ -18,7 +23,7 @@
     - name: move to file
       copy:
         content: "{{ backup.stdout }}"
-        dest: "lab2/backup/{{ inventory_hostname }}_config.{{ timestamp}}"
+        dest: "lab2/backup/{{ inventory_hostname }}_config.{{ timestamp }}"
         
     - name: REMOVE NON CONFIG LINES
       lineinfile:
