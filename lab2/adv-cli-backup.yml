@@ -12,8 +12,8 @@
 
     - name: Creating Directory
       file: 
-        path: "backup/"
-        state: touch
+        path: "./backup"
+        state: directory
 
     - name: backup config
       cli_command:
