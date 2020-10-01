@@ -14,4 +14,4 @@
     - name: move to file
       copy:
         content: "{{ backup.stdout }}"
-        dest: "lab2/backup/{{ inventory_hostname }}_config.{{ lookup('pipe','date +%Y-%m-%d@%H:%M:%S') }}"
+        dest: "backup/{{ inventory_hostname }}_config.{{ lookup('pipe','date +%Y-%m-%d@%H:%M:%S') }}"
