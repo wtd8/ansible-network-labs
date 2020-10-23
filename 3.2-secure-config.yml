@@ -7,4 +7,4 @@
   tasks:
     - name: ENSURE THAT ROUTERS ARE SECURE
       ios_config:
-        src: ~/ansible-network-labs/lab3/secure-config.cfg
+        src: 32-secure-config.cfg
