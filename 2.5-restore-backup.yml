@@ -17,7 +17,9 @@
           ip scp server enable
 
     - name: COPY RUNNING CONFIG TO ROUTER
-      command: scp ./backup/{{ backup_file }} {{ansible_host}}:/{{ backup_file }}
+      net_put:
+          src: "./backup/{{ backup_file }}"
+          dest: flash:{{ backup_file }}
 
     - name: Disable SCP Server 
       cli_config:
