@@ -1,0 +1,15 @@
+---
+- name: Initialize Router
+  hosts: routers
+  connection: network_cli
+  gather_facts: no
+
+  vars_files:
+    - encrypt.yml
+
+  tasks:
+  - name: add username and password to router
+    ios_config:
+      lines:
+        - username {{ username }} privilege 15 secret {{ password }}
+...
