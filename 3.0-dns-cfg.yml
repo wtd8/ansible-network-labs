@@ -28,4 +28,4 @@
             - ip address 172.17.{{ studentid }}.1 255.255.255.0
           parents: interface Loopback0
     when: ' studentrouter in inventory_hostname '
-  
+...

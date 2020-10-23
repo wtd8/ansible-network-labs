@@ -36,3 +36,4 @@
         path: "backup/{{ inventory_hostname }}_config.{{ timestamp }}"
         regexp: 'Current configuration.*'
         state: absent
+...

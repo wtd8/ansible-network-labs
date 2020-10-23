@@ -30,3 +30,4 @@
       ios_command:
         commands:
           - config replace flash:{{ backup_file }} force
+...

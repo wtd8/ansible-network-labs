@@ -8,3 +8,4 @@
     - name: ENSURE THAT ROUTERS ARE SECURE
       ios_config:
         src: 32-secure-config.cfg
+...

@@ -13,3 +13,4 @@
         commands:
           - snmp-server community {{ read_only }} RO
           - snmp-server community {{ read_write }} RW
+...

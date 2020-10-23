@@ -24,3 +24,4 @@
         - 'network 0.0.0.0 0.0.0.0 area 0'
         - 'no passive-interface tunnel{{ studentid }}'
       parents: router ospf 1
+...

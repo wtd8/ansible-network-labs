@@ -27,3 +27,4 @@
       debug:
         msg: "The {{ show_output.stdout[0] }}"
       tags: show
+...

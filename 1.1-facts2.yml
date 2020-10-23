@@ -14,3 +14,4 @@
     - name: display serial number
       debug:
         msg: "The serial number is:{{ ansible_net_serialnum }}"
+...
