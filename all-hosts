@@ -24,7 +24,16 @@ ansible_network_os=junos
 [arista:vars]
 ansible_network_os=eos
 
+
 [lab]
+R150 ansible_host=10.1.150.10
+R151 ansible_host=10.1.151.10
+R152 ansible_host=10.1.152.10
+R153 ansible_host=10.1.153.10
+R154 ansible_host=10.1.154.10
+R155 ansible_host=10.1.155.10
+
+[lab-master]
 R150 ansible_host=10.1.150.10
 R151 ansible_host=10.1.151.10
 R152 ansible_host=10.1.152.10
