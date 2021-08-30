@@ -26,11 +26,11 @@ ansible_network_os=eos
 
 
 [lab]
-R110 ansible_host=10.1.150.10
-R111 ansible_host=10.1.151.10
-R112 ansible_host=10.1.152.10
-R113 ansible_host=10.1.153.10
-R114 ansible_host=10.1.154.10
+R110 ansible_host=10.1.110.10
+R111 ansible_host=10.1.111.10
+R112 ansible_host=10.1.112.10
+R113 ansible_host=10.1.113.10
+R114 ansible_host=10.1.114.10
 
 
 [lab-master]
