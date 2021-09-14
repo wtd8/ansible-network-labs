@@ -34,5 +34,5 @@
   - name: add username and password to router
     ios_config:
       lines:
-        - username siduserXXX privilege 15 secret password
+        - username siduser105 privilege 15 secret cisco
 ...
